@@ -3,12 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
      * jQuery(function($) {}); добавлено для избежания конфликта
      */
     jQuery(function ($) {
+        console.log('tyty');
         function sendMail(formData, action, formContact) {
+            console.log('email');
+            console.log(formData);
             $.ajax({
                 url: action,
                 type: 'POST',
                 data: formData,
                 error: function (response) {
+
                     function sendMail(formData, action, formContact) {
                         $.ajax({
                             url: action,
@@ -20,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             },
                             success: function (response) {
                                 console.log(response);
-                                formContact.html('<p class="form-success text-center">Ваша вопрос успешно отправлен</p>');
+                                formContact.html('<p class="form-success text-center">Ваша заявка успешно отправлена</p>');
                             }
                         });	//end ajax
                     }
