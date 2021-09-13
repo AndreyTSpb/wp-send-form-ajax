@@ -40,7 +40,7 @@ add_action('wp_ajax_nopriv_send_email_ajax','send_email_ajax');
 
 function send_email_ajax() {
 
-    print_r($_POST);
+    //print_r($_POST);
     /**
      * Array
         (
